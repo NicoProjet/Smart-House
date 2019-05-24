@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FF495DDC"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/list_item_string"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="15dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_light"
+        android:layout_width="wrap_content" />
+
+    <Button
+        android:id="@+id/decrease_button"
+        android:background="@drawable/roundedbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/list_item_string"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:text="-"
+        android:textColor="@android:color/background_light"
+        android:minWidth="40dp"
+        android:minHeight="40dp"
+        android:onClick="decreaseTemp"/>
+
+    <TextView
+        android:id="@+id/list_item_string2"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/decrease_button"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_light"
+        android:layout_width="wrap_content" />
+
+    <Button
+        android:id="@+id/increase_button"
+        android:background="@drawable/roundedbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/list_item_string2"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:text="+"
+        android:textColor="@android:color/background_light"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:onClick="increaseTemp"/>
+
+</RelativeLayout>
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:background="#FF495DDC">
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textSize="20dip"
+            android:textStyle="bold"
+            android:textColor="@android:color/background_light"
+            android:layout_weight="1" >
+        </TextView>
+
+        <Button
+            android:text="-"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button4"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:padding="10dip"
+            android:textSize="20dip"
+            android:textStyle="bold"
+            android:textColor="@android:color/background_light"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="+"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button5"
+            android:layout_weight="1" />
+    </LinearLayout>
+    -->

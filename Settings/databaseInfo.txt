@@ -1,0 +1,4 @@
+house
+1234
+4
+jdbc:mysql://127.0.0.1:3306/printemps

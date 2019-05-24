@@ -1,0 +1,4 @@
+http://upfrontanalytics.com/data-mining-vs-artificial-intelligence-vs-machine-learning/
+http://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/
+http://www.cad.zju.edu.cn/home/zhx/csmath/lib/exe/fetch.php?media=2011:presentation_ml_by_ibrar.pdf
+http://www.cs.princeton.edu/~schapire/talks/picasso-minicourse.pdf

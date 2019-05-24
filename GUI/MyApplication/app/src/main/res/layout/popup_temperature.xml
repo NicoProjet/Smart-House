@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="150dp"
+    android:id="@+id/popup_temperature"
+    android:background="@drawable/popup_schedule"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/popup_editText"
+            android:textColor="@android:color/white"
+            android:layout_gravity="left" />
+
+        <TextView
+            android:text="T°"
+            android:layout_width="20sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_gravity="right|center_vertical"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="15dp"
+        android:background="#303f9f">
+
+        <Button
+            android:text="Ajouter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/popup_add"
+            android:background="@drawable/roundedbutton"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Annuler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/popup_cancel"
+            android:background="@drawable/roundedbutton"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

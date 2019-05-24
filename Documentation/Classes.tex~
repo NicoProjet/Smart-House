@@ -1,0 +1,44 @@
+\documentclass[a4paper,11pt]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\title{}
+\author{Nicolas Potvin \\Sacha Medaer \\Nicolas Ferron \\Kishiro Nishio}
+
+\begin{document}
+
+%\maketitle
+\tableofcontents
+
+%\begin{abstract}
+%\end{abstract}
+
+\section{Server}
+Le serveur instancie un objet \textit{Scheduler} et gère les communications client-serveur. Pour chaque communication, un thread de la classe \textit{Listen\_thread} est instancé et lancé. Un thread \textit{DayPlanner\_daemon} est lancé pour déterminer l'horaire de la journée.
+
+\section{Scheduler}
+La classe se chargeant d'effectuer les changements de température et d'écrire dans la base de données.\\
+Chaque jour, le scheduler reçoit de la part du thread incluant le Machine Learning un objet de la classe \textit{Day} correspondant à l'horaire de la journée.\\
+Le scheduler contient un objet \textit{HeaterManager} pour pouvoir modifier la température des pièces de la maison et un objet \textit{DatabaseAccess} pour écrire dan la base de données les changements de température au fur et à mesure de la journée.\\
+Remarque : c'est dans cette classe que doit être géré le temps nécessaire au chaffage d'une pièce.
+
+\section{HeaterManager}
+Cette classe sert à faire le lien entre le hardware de la maison et le programme, elle reçoit des ordres concernant la température des pièces, elle ne gère ni l'heure ni le temps nécessaire à chauffer la pièce.
+
+\section{DatabaseAccess}
+Sert d'interface entre la database et le programme.
+
+\section{Listen\_thread}
+Instancié à chaque connection entrante par le serveur, cette classe sert à gérer les requêtes des clients.
+
+\section{Update\_daemon}
+Daemon se chargeant de changer les températures via le scheduler au bon moment.
+
+\section{DayPlanner\_daemon}
+Ce daemon contiendra toute la partie "Machine Learning" du programme. Il se réveillera une fois par jour pour déterminer l'horaire de la journée et le fournir au scheduler.
+
+\section{Day}
+Une ADT servant à contenir l'horaire d'une journée.
+
+\end{document}
